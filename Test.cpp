@@ -1,9 +1,7 @@
 //
 // Created by shira on 26/05/2020.
 //
-
 #include "doctest.h"
-
 #include "DemoGame.hpp"
 #include "FootSoldier.hpp"
 #include "FootCommander.hpp"
@@ -45,7 +43,7 @@ TEST_CASE ("Placing the players on the board") {
     for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 2; j++) {
             //player 1
-            int j1 = 0;
+            int j1 = j*4;
                     CHECK_NOTHROW((board[{i, j1}] = new FootSoldier(1)));
                     CHECK_THROWS((board[{i, j1}] = new FootSoldier(1)));
                     CHECK_NOTHROW((board[{i, ++j1}] = new FootSoldier(1)));
@@ -55,7 +53,7 @@ TEST_CASE ("Placing the players on the board") {
                     CHECK_NOTHROW((board[{i, ++j1}] = new Paramedic(1)));
                     CHECK_THROWS((board[{i, j1}] = new Paramedic(1)));
             //player 2
-            int j2 = 0;
+            int j2 = j*4;
                     CHECK_NOTHROW((board[{7 - i, j2}] = new FootSoldier(2)));
                     CHECK_THROWS((board[{7 - i, j2}] = new FootSoldier(2)));
                     CHECK_NOTHROW((board[{7 - i, ++j2}] = new FootSoldier(2)));
@@ -119,5 +117,3 @@ TEST_CASE ("player 1 win!!") {
     CHECK(!board.has_soldiers(2));
     CHECK(board.has_soldiers(1));
 }
-
-
