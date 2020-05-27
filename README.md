@@ -1,3 +1,5 @@
+![Screenshot from 2020-05-27 03-19-58](https://user-images.githubusercontent.com/58064644/82962648-79448d00-9fc9-11ea-91f4-0e4da08d81d7.png)
+
 <div dir="rtl" lang="he">
 
 # משחק מלחמה - שלב א
