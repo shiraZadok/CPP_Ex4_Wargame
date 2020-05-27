@@ -64,18 +64,18 @@ TEST_CASE ("Placing the players on the board") {
                     CHECK_THROWS((board[{7 - i, j2}] = new Paramedic(2)));
         }
     }
-            CHECK_NOTHROW((board[{2, 2}] = new FootSoldier(1)));
-            CHECK_THROWS((board[{2, 2}] = new FootSoldier(1)));
-            CHECK_NOTHROW((board[{2, 4}] = new FootSoldier(1)));
-            CHECK_THROWS((board[{2, 4}] = new FootSoldier(1)));
-            CHECK_NOTHROW((board[{2, 6}] = new Sniper(1)));
-            CHECK_THROWS((board[{2, 6}] = new Sniper(1)));
-            CHECK_NOTHROW((board[{5, 2}] = new FootSoldier(2)));
-            CHECK_THROWS((board[{5, 2}] = new FootSoldier(2)));
-            CHECK_NOTHROW((board[{5, 4}] = new FootSoldier(2)));
-            CHECK_THROWS((board[{5, 4}] = new FootSoldier(2)));
-            CHECK_NOTHROW((board[{5, 6}] = new Sniper(2)));
-            CHECK_THROWS((board[{5, 6}] = new Sniper(2)));
+            CHECK_NOTHROW((board[{2, 2}] = new FootCommander(1)));
+            CHECK_THROWS((board[{2, 2}] = new FootCommander(1)));
+            CHECK_NOTHROW((board[{2, 4}] = new SniperCommander(1)));
+            CHECK_THROWS((board[{2, 4}] = new SniperCommander(1)));
+            CHECK_NOTHROW((board[{2, 6}] = new ParamedicCommander(1)));
+            CHECK_THROWS((board[{2, 6}] = new ParamedicCommander(1)));
+            CHECK_NOTHROW((board[{5, 2}] = new FootCommander(2)));
+            CHECK_THROWS((board[{5, 2}] = new FootCommander(2)));
+            CHECK_NOTHROW((board[{5, 4}] = new SniperCommander(2)));
+            CHECK_THROWS((board[{5, 4}] = new SniperCommander(2)));
+            CHECK_NOTHROW((board[{5, 6}] = new ParamedicCommander(2)));
+            CHECK_THROWS((board[{5, 6}] = new ParamedicCommander(2)));
 
 }
 
