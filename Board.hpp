@@ -1,6 +1,7 @@
 //
 // Created by shira on 26/05/2020.
 //
+#pragma once
 #include <sys/types.h>
 #include <string>
 #include <vector>
@@ -14,15 +15,26 @@ namespace WarGame {
 class WarGame::Board {
 private:
     std::vector<std::vector<Soldier*>> board;
-public:
-    enum MoveDIR { Up, Down, Right, Left };
 
-    Board(uint numRows, uint numCols) :
+public:
+    enum MoveDIR { Up , Down , Right , Left };
+    Board(int numRows, int numCols) :
             board(numRows, std::vector<Soldier*>(numCols, nullptr)) {}
-    Soldier*& operator[](std::pair<int,int> location){return board[location.first][location.second];}
-    Soldier* operator[](std::pair<int,int> location) const{ Soldier *s; return s;}
-    void move(uint player_number, std::pair<int,int> source, MoveDIR direction){}
-    bool has_soldiers(uint player_number) const{return false;}
+
+    // operator for putting soldiers on the game-board during initialization.
+    Soldier*& operator[](std::pair<int,int> location){
+            return board[location.first][location.second];
+    }
+
+    // operator for reading which soldiers are on the game-board.
+    Soldier* operator[](std::pair<int,int> location) const{
+        return board[location.first][location.second];
+    }
+
+    void move(int player_number, std::pair<int,int> source, MoveDIR direction);
+
+    bool has_soldiers(int player_number) const;
+
     ~Board(){
         board.clear();
     }

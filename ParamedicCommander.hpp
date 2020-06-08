@@ -1,10 +1,13 @@
 //
 // Created by shira on 26/05/2020.
 //
+#pragma once
+#include "Paramedic.hpp"
 
-#include "Soldier.hpp"
-
-class ParamedicCommander: public Soldier{
+class ParamedicCommander: public Paramedic{
 public:
-    ParamedicCommander(int Player){}
+    ParamedicCommander(int player):Paramedic(player,200,0,200){}
+
+    void attack(std::vector<std::vector<Soldier *>>&,std::pair<int,int> source) override;
+
 };
