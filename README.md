@@ -1,4 +1,4 @@
-![UML](https://user-images.githubusercontent.com/58064644/83991069-54023800-a954-11ea-93a8-74627e2d494e.png)
+![UML](https://user-images.githubusercontent.com/58064644/83991130-8a3fb780-a954-11ea-9f80-87e9bc246652.png)
 
 <div dir="rtl" lang="he">
 
